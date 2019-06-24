@@ -43,5 +43,12 @@
 	</array>
 	<key>NSFaceIDUsageDescription</key>
 	<string>We need your face/fingerprint</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>To save protein snapshot</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

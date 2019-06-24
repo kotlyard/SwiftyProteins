@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A9159F744CCC7E196A222A7 /* Pods_SwiftyProteins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D3E6DDF91E1FA9619BC68D /* Pods_SwiftyProteins.framework */; };
+		3BD3233D00CA9F2349170E26 /* Pods_SwiftyProteinsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68491F934D9D65F52D281BFE /* Pods_SwiftyProteinsTests.framework */; };
+		B15560DA2FDD2116159A7CE2 /* Pods_SwiftyProteinsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC0E0FC1F01FD9AC0B8FA78 /* Pods_SwiftyProteinsUITests.framework */; };
+		FB0773F122BA633600586D4A /* SCNAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0773F022BA633600586D4A /* SCNAtom.swift */; };
 		FB323B2E22A004DE00342E3C /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB323B2D22A004DE00342E3C /* ligands.txt */; };
 		FB323B3022A0052D00342E3C /* ProteinsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB323B2F22A0052D00342E3C /* ProteinsListViewController.swift */; };
+		FB49582822C0BDD100421B1C /* SCNConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49582722C0BDD100421B1C /* SCNConnection.swift */; };
 		FB537396229D54E5003CAA6C /* Molecules_glare_communication_3428x1928.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB537395229D54E5003CAA6C /* Molecules_glare_communication_3428x1928.jpg */; };
 		FBA2A129229D2AC1002AC671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2A128229D2AC1002AC671 /* AppDelegate.swift */; };
 		FBA2A12B229D2AC1002AC671 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2A12A229D2AC1002AC671 /* AuthViewController.swift */; };
@@ -19,6 +24,11 @@
 		FBA2A149229D2AC1002AC671 /* SwiftyProteinsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2A148229D2AC1002AC671 /* SwiftyProteinsUITests.swift */; };
 		FBA2A15F229D348D002AC671 /* molecules (1).png in Resources */ = {isa = PBXBuildFile; fileRef = FBA2A15E229D348D002AC671 /* molecules (1).png */; };
 		FBB8746A229D5E8A0057F3BF /* abstract.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBB87469229D5E8A0057F3BF /* abstract.jpg */; };
+		FBBC5D0322A182E60099BB28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC5D0222A182E60099BB28 /* Colors.swift */; };
+		FBCA9D8D22A12EE000D30337 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA9D8C22A12EE000D30337 /* NetworkController.swift */; };
+		FBCA9D8F22A12EED00D30337 /* Atom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA9D8E22A12EED00D30337 /* Atom.swift */; };
+		FBCA9D9122A13F4600D30337 /* ProteinModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA9D9022A13F4600D30337 /* ProteinModelViewController.swift */; };
+		FBCA9D9322A1440A00D30337 /* Molecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA9D9222A1440A00D30337 /* Molecule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +49,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EDC4686826858B1D25A2D38 /* Pods-SwiftyProteins.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.release.xcconfig"; path = "Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.release.xcconfig"; sourceTree = "<group>"; };
+		32C9D222F92659DCAD39B7C0 /* Pods-SwiftyProteinsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteinsUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyProteinsUITests/Pods-SwiftyProteinsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B616AE64FBE3EEBC7D3D301 /* Pods-SwiftyProteinsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteinsTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyProteinsTests/Pods-SwiftyProteinsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		68491F934D9D65F52D281BFE /* Pods_SwiftyProteinsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyProteinsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D3E6DDF91E1FA9619BC68D /* Pods_SwiftyProteins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyProteins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AF3D723F9A4BBA7DDA15A4 /* Pods-SwiftyProteinsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteinsTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyProteinsTests/Pods-SwiftyProteinsTests.release.xcconfig"; sourceTree = "<group>"; };
+		DBC0E0FC1F01FD9AC0B8FA78 /* Pods_SwiftyProteinsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyProteinsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E029CC57AAD090BD1474427A /* Pods-SwiftyProteinsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteinsUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyProteinsUITests/Pods-SwiftyProteinsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F7A0B895713DE71C970BDEF7 /* Pods-SwiftyProteins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.debug.xcconfig"; sourceTree = "<group>"; };
+		FB0773F022BA633600586D4A /* SCNAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNAtom.swift; sourceTree = "<group>"; };
 		FB323B2D22A004DE00342E3C /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
 		FB323B2F22A0052D00342E3C /* ProteinsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinsListViewController.swift; sourceTree = "<group>"; };
+		FB49582722C0BDD100421B1C /* SCNConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNConnection.swift; sourceTree = "<group>"; };
 		FB537395229D54E5003CAA6C /* Molecules_glare_communication_3428x1928.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Molecules_glare_communication_3428x1928.jpg; sourceTree = "<group>"; };
 		FBA2A125229D2AC1002AC671 /* SwiftyProteins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyProteins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA2A128229D2AC1002AC671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +78,11 @@
 		FBA2A14A229D2AC1002AC671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBA2A15E229D348D002AC671 /* molecules (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "molecules (1).png"; sourceTree = "<group>"; };
 		FBB87469229D5E8A0057F3BF /* abstract.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abstract.jpg; sourceTree = "<group>"; };
+		FBBC5D0222A182E60099BB28 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FBCA9D8C22A12EE000D30337 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; usesTabs = 1; };
+		FBCA9D8E22A12EED00D30337 /* Atom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atom.swift; sourceTree = "<group>"; };
+		FBCA9D9022A13F4600D30337 /* ProteinModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinModelViewController.swift; sourceTree = "<group>"; usesTabs = 1; };
+		FBCA9D9222A1440A00D30337 /* Molecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molecule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9159F744CCC7E196A222A7 /* Pods_SwiftyProteins.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD3233D00CA9F2349170E26 /* Pods_SwiftyProteinsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +106,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15560DA2FDD2116159A7CE2 /* Pods_SwiftyProteinsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DFBBF90BD5B037B95B066F2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7A0B895713DE71C970BDEF7 /* Pods-SwiftyProteins.debug.xcconfig */,
+				2EDC4686826858B1D25A2D38 /* Pods-SwiftyProteins.release.xcconfig */,
+				4B616AE64FBE3EEBC7D3D301 /* Pods-SwiftyProteinsTests.debug.xcconfig */,
+				C3AF3D723F9A4BBA7DDA15A4 /* Pods-SwiftyProteinsTests.release.xcconfig */,
+				32C9D222F92659DCAD39B7C0 /* Pods-SwiftyProteinsUITests.debug.xcconfig */,
+				E029CC57AAD090BD1474427A /* Pods-SwiftyProteinsUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F8C16757F8B548FADF984D01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86D3E6DDF91E1FA9619BC68D /* Pods_SwiftyProteins.framework */,
+				68491F934D9D65F52D281BFE /* Pods_SwiftyProteinsTests.framework */,
+				DBC0E0FC1F01FD9AC0B8FA78 /* Pods_SwiftyProteinsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB0773EF22BA62F500586D4A /* SCNModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB0773F022BA633600586D4A /* SCNAtom.swift */,
+				FB49582722C0BDD100421B1C /* SCNConnection.swift */,
+			);
+			path = SCNModels;
+			sourceTree = "<group>";
+		};
 		FBA2A11C229D2AC1002AC671 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +152,8 @@
 				FBA2A13C229D2AC1002AC671 /* SwiftyProteinsTests */,
 				FBA2A147229D2AC1002AC671 /* SwiftyProteinsUITests */,
 				FBA2A126229D2AC1002AC671 /* Products */,
+				DFBBF90BD5B037B95B066F2E /* Pods */,
+				F8C16757F8B548FADF984D01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +172,9 @@
 			children = (
 				FBA2A128229D2AC1002AC671 /* AppDelegate.swift */,
 				FBB8746D229D663D0057F3BF /* Controllers */,
-				FBB8746C229D66370057F3BF /* Models */,
 				FBB8746B229D662E0057F3BF /* Views */,
-				FBB8746E229D664C0057F3BF /* Storyboads */,
+				FBB8746C229D66370057F3BF /* Models */,
+				FBB8746E229D664C0057F3BF /* Storyboards */,
 				FBB8746F229D665D0057F3BF /* Images */,
 				FBA2A12F229D2AC1002AC671 /* Assets.xcassets */,
 				FB323B2D22A004DE00342E3C /* ligands.txt */,
@@ -148,6 +211,10 @@
 		FBB8746C229D66370057F3BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FBCA9D8E22A12EED00D30337 /* Atom.swift */,
+				FBCA9D9222A1440A00D30337 /* Molecule.swift */,
+				FBBC5D0222A182E60099BB28 /* Colors.swift */,
+				FB0773EF22BA62F500586D4A /* SCNModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,18 +223,20 @@
 			isa = PBXGroup;
 			children = (
 				FBA2A12A229D2AC1002AC671 /* AuthViewController.swift */,
+				FBCA9D8C22A12EE000D30337 /* NetworkController.swift */,
+				FBCA9D9022A13F4600D30337 /* ProteinModelViewController.swift */,
 				FB323B2F22A0052D00342E3C /* ProteinsListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		FBB8746E229D664C0057F3BF /* Storyboads */ = {
+		FBB8746E229D664C0057F3BF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				FBA2A12C229D2AC1002AC671 /* Main.storyboard */,
 				FBA2A131229D2AC1002AC671 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboads;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		FBB8746F229D665D0057F3BF /* Images */ = {
@@ -187,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBA2A14D229D2AC1002AC671 /* Build configuration list for PBXNativeTarget "SwiftyProteins" */;
 			buildPhases = (
+				621709B943C9936BCC096B34 /* [CP] Check Pods Manifest.lock */,
 				FBA2A121229D2AC1002AC671 /* Sources */,
 				FBA2A122229D2AC1002AC671 /* Frameworks */,
 				FBA2A123229D2AC1002AC671 /* Resources */,
+				747123DB8756744D14F41B04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBA2A150229D2AC1002AC671 /* Build configuration list for PBXNativeTarget "SwiftyProteinsTests" */;
 			buildPhases = (
+				B8E385DFA93027146434A34E /* [CP] Check Pods Manifest.lock */,
 				FBA2A135229D2AC1002AC671 /* Sources */,
 				FBA2A136229D2AC1002AC671 /* Frameworks */,
 				FBA2A137229D2AC1002AC671 /* Resources */,
@@ -222,6 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBA2A153229D2AC1002AC671 /* Build configuration list for PBXNativeTarget "SwiftyProteinsUITests" */;
 			buildPhases = (
+				1C2B6F58EA499A9FD767A0C8 /* [CP] Check Pods Manifest.lock */,
 				FBA2A140229D2AC1002AC671 /* Sources */,
 				FBA2A141229D2AC1002AC671 /* Frameworks */,
 				FBA2A142229D2AC1002AC671 /* Resources */,
@@ -316,14 +389,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C2B6F58EA499A9FD767A0C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftyProteinsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		621709B943C9936BCC096B34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftyProteins-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		747123DB8756744D14F41B04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8E385DFA93027146434A34E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftyProteinsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FBA2A121229D2AC1002AC671 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBCA9D8D22A12EE000D30337 /* NetworkController.swift in Sources */,
 				FBA2A12B229D2AC1002AC671 /* AuthViewController.swift in Sources */,
+				FBBC5D0322A182E60099BB28 /* Colors.swift in Sources */,
+				FBCA9D8F22A12EED00D30337 /* Atom.swift in Sources */,
+				FB0773F122BA633600586D4A /* SCNAtom.swift in Sources */,
 				FB323B3022A0052D00342E3C /* ProteinsListViewController.swift in Sources */,
+				FB49582822C0BDD100421B1C /* SCNConnection.swift in Sources */,
+				FBCA9D9322A1440A00D30337 /* Molecule.swift in Sources */,
 				FBA2A129229D2AC1002AC671 /* AppDelegate.swift in Sources */,
+				FBCA9D9122A13F4600D30337 /* ProteinModelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,11 +552,12 @@
 		FBA2A14B229D2AC1002AC671 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -414,7 +586,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -433,18 +605,19 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Debug;
 		};
 		FBA2A14C229D2AC1002AC671 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -473,8 +646,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -491,6 +665,7 @@
 		};
 		FBA2A14E229D2AC1002AC671 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7A0B895713DE71C970BDEF7 /* Pods-SwiftyProteins.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +680,7 @@
 		};
 		FBA2A14F229D2AC1002AC671 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EDC4686826858B1D25A2D38 /* Pods-SwiftyProteins.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -519,6 +695,7 @@
 		};
 		FBA2A151229D2AC1002AC671 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B616AE64FBE3EEBC7D3D301 /* Pods-SwiftyProteinsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +712,7 @@
 		};
 		FBA2A152229D2AC1002AC671 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3AF3D723F9A4BBA7DDA15A4 /* Pods-SwiftyProteinsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -551,6 +729,7 @@
 		};
 		FBA2A154229D2AC1002AC671 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32C9D222F92659DCAD39B7C0 /* Pods-SwiftyProteinsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -566,6 +745,7 @@
 		};
 		FBA2A155229D2AC1002AC671 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E029CC57AAD090BD1474427A /* Pods-SwiftyProteinsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

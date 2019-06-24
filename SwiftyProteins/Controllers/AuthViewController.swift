@@ -15,15 +15,12 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var mainSpinner: UIActivityIndicatorView!
     
+    
     //actions
     @IBAction func loginTapped(_ sender: UIButton) {
         turnOffInterface()
         authWithBiometrics()
     }
-    
-    
-    //variables
-    
     
     
     //override functions
@@ -34,13 +31,8 @@ class AuthViewController: UIViewController {
         
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-
-    }
-
     
+    // my funcs
     func authWithBiometrics() {
         let context = LAContext()
         let reason = "Plese identify yourself to sign in Swifty Proteins"
@@ -56,9 +48,9 @@ class AuthViewController: UIViewController {
                 }
                 else { print(error?.localizedDescription ?? "error") }
             })
-        
         }
         else { showAlert(with: error?.localizedDescription ?? "error") }
+        turnOnInterface()
     }
 }
 

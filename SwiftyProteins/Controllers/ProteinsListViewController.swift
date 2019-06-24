@@ -13,6 +13,12 @@ class ProteinsListViewController: UITableViewController {
     //variables
     var proteinsList =   [String]()
     var filteredProteins =   [String]()
+    var molecule: Molecule? = nil
+  
+    
+    @IBAction func toTop(_ sender: Any) {
+        self.tableView.setContentOffset(CGPoint(x: 0, y: -(self.view.bounds.height * 0.1)), animated: true)
+    }
     
     
     override func viewDidLoad() {
@@ -21,18 +27,13 @@ class ProteinsListViewController: UITableViewController {
         filteredProteins = proteinsList
     }
  
-    @IBAction func toTop(_ sender: Any) {
-        self.tableView.setContentOffset(CGPoint(x: 0, y: -(self.view.bounds.height * 0.1)), animated: true)
-    }
-    
+ 
     func parseProteinsListFile() {
         
         if let path = Bundle.main.path(forResource: "ligands", ofType: "txt") {
             do {
                 let allProteinsList = try String(contentsOfFile: path)
                 self.proteinsList = allProteinsList.components(separatedBy: CharacterSet.newlines).filter( { !$0.isEmpty } )
-            
-                print(self.proteinsList)
             }
             catch { fatalError(error.localizedDescription) }
         }
@@ -42,15 +43,46 @@ class ProteinsListViewController: UITableViewController {
     
 }
 
+
+
+// MARK: Navigation
+extension ProteinsListViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toProteinModel" {
+            if let dest = segue.destination as? ProteinModelViewController {
+                dest.molecule = molecule
+                dest.title = molecule?.name
+            }
+        }
+    }
+}
+
+
+
+
+
+
 // TableView Delegating
 extension ProteinsListViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            self.view.endEditing(true)
+        self.view.endEditing(true)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         self.view.endEditing(true)
+        turnOffInterface()
+        NetworkController.requestMolecule(with: tableView.cellForRow(at: indexPath)?.textLabel?.text! ?? "011") { moleculeString in
+            if moleculeString.isEmpty {
+                self.showAlert(with: "There was an error downloading molecule model")
+            } else {
+                self.molecule = NetworkController.parseMolecule(with: moleculeString)
+                self.performSegue(withIdentifier: "toProteinModel", sender: nil)
+            }
+            self.turnOnInterface()
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,7 +96,10 @@ extension ProteinsListViewController {
         }
        return UITableViewCell()
     }
+ 
 }
+
+
 
 // SearchBar delegating
 extension ProteinsListViewController: UISearchBarDelegate {
@@ -85,3 +120,19 @@ extension ProteinsListViewController: UISearchBarDelegate {
 }
 
 
+extension ProteinsListViewController {
+    func turnOnInterface() {
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = true
+            self.view.layer.opacity = 1
+        }
+        
+    }
+    
+    func turnOffInterface() {
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = false
+            self.view.layer.opacity = 0.6
+        }
+    }
+}
