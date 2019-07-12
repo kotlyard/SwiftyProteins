@@ -11,10 +11,12 @@
 		3BD3233D00CA9F2349170E26 /* Pods_SwiftyProteinsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68491F934D9D65F52D281BFE /* Pods_SwiftyProteinsTests.framework */; };
 		B15560DA2FDD2116159A7CE2 /* Pods_SwiftyProteinsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC0E0FC1F01FD9AC0B8FA78 /* Pods_SwiftyProteinsUITests.framework */; };
 		FB0773F122BA633600586D4A /* SCNAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0773F022BA633600586D4A /* SCNAtom.swift */; };
+		FB2FBEA922CE026800F4AF24 /* ARModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2FBEA822CE026800F4AF24 /* ARModelViewController.swift */; };
 		FB323B2E22A004DE00342E3C /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB323B2D22A004DE00342E3C /* ligands.txt */; };
 		FB323B3022A0052D00342E3C /* ProteinsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB323B2F22A0052D00342E3C /* ProteinsListViewController.swift */; };
 		FB49582822C0BDD100421B1C /* SCNConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49582722C0BDD100421B1C /* SCNConnection.swift */; };
 		FB537396229D54E5003CAA6C /* Molecules_glare_communication_3428x1928.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB537395229D54E5003CAA6C /* Molecules_glare_communication_3428x1928.jpg */; };
+		FB6251BB22D893F70057A378 /* AlertLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6251BA22D893F70057A378 /* AlertLabel.swift */; };
 		FBA2A129229D2AC1002AC671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2A128229D2AC1002AC671 /* AppDelegate.swift */; };
 		FBA2A12B229D2AC1002AC671 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2A12A229D2AC1002AC671 /* AuthViewController.swift */; };
 		FBA2A12E229D2AC1002AC671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA2A12C229D2AC1002AC671 /* Main.storyboard */; };
@@ -29,6 +31,9 @@
 		FBCA9D8F22A12EED00D30337 /* Atom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA9D8E22A12EED00D30337 /* Atom.swift */; };
 		FBCA9D9122A13F4600D30337 /* ProteinModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA9D9022A13F4600D30337 /* ProteinModelViewController.swift */; };
 		FBCA9D9322A1440A00D30337 /* Molecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA9D9222A1440A00D30337 /* Molecule.swift */; };
+		FBFD584F22D72AC8005B6585 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFD584E22D72AC8005B6585 /* SettingsViewController.swift */; };
+		FBFD585122D72E6C005B6585 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFD585022D72E6C005B6585 /* AppSettings.swift */; };
+		FBFD585322D7344B005B6585 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFD585222D7344B005B6585 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +64,12 @@
 		E029CC57AAD090BD1474427A /* Pods-SwiftyProteinsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteinsUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyProteinsUITests/Pods-SwiftyProteinsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F7A0B895713DE71C970BDEF7 /* Pods-SwiftyProteins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.debug.xcconfig"; sourceTree = "<group>"; };
 		FB0773F022BA633600586D4A /* SCNAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNAtom.swift; sourceTree = "<group>"; };
+		FB2FBEA822CE026800F4AF24 /* ARModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARModelViewController.swift; sourceTree = "<group>"; };
 		FB323B2D22A004DE00342E3C /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
 		FB323B2F22A0052D00342E3C /* ProteinsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinsListViewController.swift; sourceTree = "<group>"; };
 		FB49582722C0BDD100421B1C /* SCNConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNConnection.swift; sourceTree = "<group>"; };
 		FB537395229D54E5003CAA6C /* Molecules_glare_communication_3428x1928.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Molecules_glare_communication_3428x1928.jpg; sourceTree = "<group>"; };
+		FB6251BA22D893F70057A378 /* AlertLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLabel.swift; sourceTree = "<group>"; };
 		FBA2A125229D2AC1002AC671 /* SwiftyProteins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyProteins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA2A128229D2AC1002AC671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA2A12A229D2AC1002AC671 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +90,9 @@
 		FBCA9D8E22A12EED00D30337 /* Atom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atom.swift; sourceTree = "<group>"; };
 		FBCA9D9022A13F4600D30337 /* ProteinModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinModelViewController.swift; sourceTree = "<group>"; usesTabs = 1; };
 		FBCA9D9222A1440A00D30337 /* Molecule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molecule.swift; sourceTree = "<group>"; };
+		FBFD584E22D72AC8005B6585 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FBFD585022D72E6C005B6585 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		FBFD585222D7344B005B6585 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA2A128229D2AC1002AC671 /* AppDelegate.swift */,
+				FBFD585222D7344B005B6585 /* Extensions.swift */,
 				FBB8746D229D663D0057F3BF /* Controllers */,
 				FBB8746B229D662E0057F3BF /* Views */,
 				FBB8746C229D66370057F3BF /* Models */,
@@ -204,6 +215,7 @@
 		FBB8746B229D662E0057F3BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB6251BA22D893F70057A378 /* AlertLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +226,7 @@
 				FBCA9D8E22A12EED00D30337 /* Atom.swift */,
 				FBCA9D9222A1440A00D30337 /* Molecule.swift */,
 				FBBC5D0222A182E60099BB28 /* Colors.swift */,
+				FBFD585022D72E6C005B6585 /* AppSettings.swift */,
 				FB0773EF22BA62F500586D4A /* SCNModels */,
 			);
 			path = Models;
@@ -225,6 +238,8 @@
 				FBA2A12A229D2AC1002AC671 /* AuthViewController.swift */,
 				FBCA9D8C22A12EE000D30337 /* NetworkController.swift */,
 				FBCA9D9022A13F4600D30337 /* ProteinModelViewController.swift */,
+				FBFD584E22D72AC8005B6585 /* SettingsViewController.swift */,
+				FB2FBEA822CE026800F4AF24 /* ARModelViewController.swift */,
 				FB323B2F22A0052D00342E3C /* ProteinsListViewController.swift */,
 			);
 			path = Controllers;
@@ -486,15 +501,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCA9D8D22A12EE000D30337 /* NetworkController.swift in Sources */,
+				FB6251BB22D893F70057A378 /* AlertLabel.swift in Sources */,
 				FBA2A12B229D2AC1002AC671 /* AuthViewController.swift in Sources */,
 				FBBC5D0322A182E60099BB28 /* Colors.swift in Sources */,
 				FBCA9D8F22A12EED00D30337 /* Atom.swift in Sources */,
 				FB0773F122BA633600586D4A /* SCNAtom.swift in Sources */,
 				FB323B3022A0052D00342E3C /* ProteinsListViewController.swift in Sources */,
+				FBFD585122D72E6C005B6585 /* AppSettings.swift in Sources */,
 				FB49582822C0BDD100421B1C /* SCNConnection.swift in Sources */,
+				FBFD584F22D72AC8005B6585 /* SettingsViewController.swift in Sources */,
 				FBCA9D9322A1440A00D30337 /* Molecule.swift in Sources */,
+				FB2FBEA922CE026800F4AF24 /* ARModelViewController.swift in Sources */,
 				FBA2A129229D2AC1002AC671 /* AppDelegate.swift in Sources */,
 				FBCA9D9122A13F4600D30337 /* ProteinModelViewController.swift in Sources */,
+				FBFD585322D7344B005B6585 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +625,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -658,7 +678,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -669,6 +690,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QR6ALTN3DU;
 				INFOPLIST_FILE = SwiftyProteins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dkotlyar.SwiftyProteins;
@@ -684,6 +706,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QR6ALTN3DU;
 				INFOPLIST_FILE = SwiftyProteins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dkotlyar.SwiftyProteins;

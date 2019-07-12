@@ -10,25 +10,33 @@ import UIKit
 
 class ProteinsListViewController: UITableViewController {
 
-    //variables
+    // - Mark: Variables
     var proteinsList =   [String]()
     var filteredProteins =   [String]()
     var molecule: Molecule? = nil
   
     
-    @IBAction func toTop(_ sender: Any) {
-        self.tableView.setContentOffset(CGPoint(x: 0, y: -(self.view.bounds.height * 0.1)), animated: true)
-    }
-    
-    
+    // - Mark: Overridden methods
     override func viewDidLoad() {
         super.viewDidLoad()
         parseProteinsListFile()
         filteredProteins = proteinsList
     }
  
- 
-    func parseProteinsListFile() {
+    
+    // - Mark: Actions
+    @IBAction func randomProteinChoice(_ sender: UIBarButtonItem) {
+        let randomRow = Int.random(in: 0...filteredProteins.count - 1)
+        getProteinModel(with: filteredProteins[randomRow])
+    }
+    
+    @IBAction func toTop(_ sender: Any) {
+        self.tableView.setContentOffset(CGPoint(x: 0, y: -(self.view.bounds.height * 0.1)), animated: true)
+    }
+    
+    
+    // - Mark: Private Functions
+    private func parseProteinsListFile() {
         
         if let path = Bundle.main.path(forResource: "ligands", ofType: "txt") {
             do {
@@ -41,11 +49,25 @@ class ProteinsListViewController: UITableViewController {
         
     }
     
+    private func getProteinModel(with name: String) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        self.view.endEditing(true)
+        self.turnOffInterface()
+        NetworkController.requestMolecule(with: name) { moleculeString in
+            if moleculeString.isEmpty {
+                self.showAlert(with: "There was an error downloading molecule model")
+            } else {
+                self.molecule = NetworkController.parseMolecule(with: moleculeString)
+                self.performSegue(withIdentifier: "toProteinModel", sender: nil)
+            }
+            self.turnOnInterface()
+        }
+    }
 }
 
 
 
-// MARK: Navigation
+// - MARK: Navigation
 extension ProteinsListViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toProteinModel" {
@@ -59,10 +81,7 @@ extension ProteinsListViewController {
 
 
 
-
-
-
-// TableView Delegating
+// - MARK: TableView Delegating
 extension ProteinsListViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -70,20 +89,10 @@ extension ProteinsListViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        self.view.endEditing(true)
-        turnOffInterface()
-        NetworkController.requestMolecule(with: tableView.cellForRow(at: indexPath)?.textLabel?.text! ?? "011") { moleculeString in
-            if moleculeString.isEmpty {
-                self.showAlert(with: "There was an error downloading molecule model")
-            } else {
-                self.molecule = NetworkController.parseMolecule(with: moleculeString)
-                self.performSegue(withIdentifier: "toProteinModel", sender: nil)
-            }
-            self.turnOnInterface()
-        }
-        
+        let cell = tableView.cellForRow(at: indexPath)
+        self.getProteinModel(with: cell?.textLabel?.text ?? "011")
     }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredProteins.count
@@ -101,12 +110,12 @@ extension ProteinsListViewController {
 
 
 
-// SearchBar delegating
+// - MARK: SearchBar delegating
 extension ProteinsListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty {
-            filteredProteins = proteinsList.filter( { $0.contains(searchText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)) } )
+            filteredProteins = proteinsList.filter( { $0.lowercased().contains(searchText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).lowercased()) } )
         } else {
             filteredProteins = proteinsList
         }

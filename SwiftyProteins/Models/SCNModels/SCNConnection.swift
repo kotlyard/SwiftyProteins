@@ -23,9 +23,9 @@ class SCNConnection: SCNNode {
         parentNode.addChildNode(nodeV2)
         
         let layDown = SCNNode()
-        layDown.eulerAngles.x = Float(Double.pi / 2)
+        layDown.eulerAngles.x = Float.pi / 2
         
-        let cylinder = SCNCylinder(radius: 0.013, height: CGFloat(height))
+        let cylinder = SCNCylinder(radius: 0.00035, height: CGFloat(height))
         cylinder.firstMaterial?.diffuse.contents = UIColor.white
         
         let nodeWithCylinder = SCNNode(geometry: cylinder)
@@ -37,7 +37,7 @@ class SCNConnection: SCNNode {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     
     func distance (v1: SCNVector3, v2: SCNVector3) -> Float {

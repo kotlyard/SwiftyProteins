@@ -15,12 +15,15 @@ class SCNAtom: SCNNode {
     
     override init() {
         super.init()
-        self.geometry = SCNSphere(radius: 0.03)
+        self.geometry = SCNSphere(radius: 0.001)
     }
     
     func draw(atom: Atom) {
         self.atomName = atom.name
-        self.worldPosition = atom.coord
+        self.position = atom.coord
+        self.position.x *= 0.025
+        self.position.y *= 0.025
+        self.position.z *= 0.025
         self.geometry?.firstMaterial?.diffuse.contents = AtomColoring.spkColoring(name: atom.name)
     }
     

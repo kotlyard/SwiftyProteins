@@ -11,40 +11,52 @@ import SceneKit
 
 
 class ProteinModelViewController: UIViewController {
-   @IBOutlet weak var SceneView: SCNView!
+   	@IBOutlet weak var SceneView: SCNView!
+	@IBOutlet weak var alertLabel: AlertLabel!
+
 	
-    
-    let scene = SCNScene()
-    let cameraNode = SCNNode()
+	let scene = SCNScene()
+		
+	var hydrogeneTextPresence = false
 	
+
 	var molecule: Molecule? = nil
-	
     var atomNodes = [SCNAtom]()
-	var connectionNodes = [SCNConnection]()
+	var hydrogeneConnectionNodes = [SCNNode]()
+	var hydrogeneTextNodes = [SCNNode]()
     var textNodes = [SCNNode]()
-    let moleculeNode = SCNNode()
+    var moleculeNode = SCNNode()
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		guard let _ = molecule else { fatalError("no molecule") }
-        setUpScene()
-		drawAtoms(with: molecule!.atoms)
-		drawConnections()
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+		alertLabel.text = "Long press anywhere to open settings"
+		UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
-
-    
-    private func setUpScene() {
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		addObservers()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		guard let molecule = molecule else { print("no molecule"); return }
+		
+		setUpScene()
+		drawAtoms(with: molecule.atoms)
+		drawConnections()
+		if AppSettings.shared.hydrogenePresence == false { hydrogeneSwitch() }
+		if AppSettings.shared.labelsPresence == true { labelsSwitch() }
+	}
+	
+    internal func setUpScene() {
         SceneView.scene = scene
         scene.rootNode.addChildNode(moleculeNode)
     }
     
     
-    private func drawAtoms(with atoms: [Atom]) {
+    internal func drawAtoms(with atoms: [Atom]) {
         for elem in atoms {
             let atomNode = SCNAtom()
             createTapGesture(for: atomNode)
@@ -52,54 +64,108 @@ class ProteinModelViewController: UIViewController {
             atomNodes.append(atomNode)
             drawAtomText(atom: elem)
             moleculeNode.addChildNode(atomNode)
+			print(atomNode.position, atomNode.worldPosition)
         }
 	}
 		
-		private func drawConnections() {
-			for elem in molecule!.connections {
-				if (elem.0 <= (molecule?.atoms.count)! && elem.1 <= (molecule?.atoms.count)!)
-				{
-					let connect = SCNConnection(v1: atomNodes[elem.0 - 1].position , v2: atomNodes[elem.1 - 1].position)
-					moleculeNode.addChildNode(connect)
+	internal func drawConnections() {
+		guard let count = molecule?.atoms.count else { print("error getting atoms count"); return }
+		
+		for elem in molecule!.connections {
+			if (elem.0 <= count && elem.1 <= count)
+			{
+				let connect = SCNConnection(v1: atomNodes[elem.0 - 1].position , v2: atomNodes[elem.1 - 1].position)
+				if atomNodes[elem.0 - 1].atomName == "H" || atomNodes[elem.1 - 1].atomName == "H" {
+					hydrogeneConnectionNodes.append(connect)
 				}
+				moleculeNode.addChildNode(connect)
 			}
 		}
+	}
 	
-	private func drawAtomText(atom: Atom) {
-		let geo = SCNText(string: atom.label, extrusionDepth: 0.1)
-		geo.firstMaterial?.diffuse.contents = UIColor.black
-		geo.font = UIFont(name: "Helvetica", size: 1.4)
+
+	
+	internal func drawAtomText(atom: Atom) {
+		let textGeometry = SCNText(string: atom.label, extrusionDepth: 0.1)
+		textGeometry.firstMaterial?.diffuse.contents = UIColor.black
+		textGeometry.font = UIFont(name: "Helvetica", size: 0.6)
 		
 		//Settig positioin
-		let textNode = SCNNode(geometry: geo)
-		textNode.worldPosition = SCNVector3(atom.coord.x, atom.coord.y, atom.coord.z + 0.01)
-		textNode.scale = SCNVector3Make(0.03, 0.03, 0.03)
+		let textNode = SCNNode(geometry: textGeometry)
+		textNode.position = SCNVector3(atom.coord.x * 0.025, atom.coord.y * 0.025, atom.coord.z * 0.025)
+		textNode.scale = SCNVector3Make(0.0015, 0.0015, 0.0015)
+		print("textNode \(textNode.position)")
 		
 		// LOCKING LABEL AT CAMERA
 		textNode.constraints = [SCNBillboardConstraint()]
-		
-		textNodes.append(textNode)
+		if atom.name == "H" {
+			hydrogeneTextNodes.append(textNode)
+		} else {
+			textNodes.append(textNode)
+		}
 	}
+
 	
-    private func createTapGesture(for atom: SCNAtom) {
+    internal func createTapGesture(for atom: SCNAtom) {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(rec:)))
         SceneView.addGestureRecognizer(tap)
     }
     
-    @objc private func handleTap(rec: UITapGestureRecognizer) {
+    @objc internal func handleTap(rec: UITapGestureRecognizer) {
         if rec.state == .ended {
             let location = rec.location(in: SceneView)
             let hits = SceneView.hitTest(location, options: nil)
             if let tappedNode = hits.first?.node as? SCNAtom {
 				print(tappedNode.atomName ?? "sas")
+				alertLabel.text = tappedNode.atomName
+				if let color =  tappedNode.geometry?.firstMaterial?.diffuse.contents as? UIColor {
+					alertLabel.textColor = color
+				}
+				
             }
         }
     }
-    
-    
 	
-    
+	@objc internal func hydrogeneSwitch() {
+		if AppSettings.shared.hydrogenePresence {
+			AppSettings.shared.hydrogenePresence = false
+			hydrogeneTextPresence = false
+			hydrogeneTextNodes.forEach({ $0.removeFromParentNode() })
+			hydrogeneConnectionNodes.forEach( { $0.removeFromParentNode() } )
+			atomNodes.forEach( { if $0.atomName == "H" { $0.removeFromParentNode()} } )
+			
+		} else {
+			AppSettings.shared.hydrogenePresence = true
+			hydrogeneConnectionNodes.forEach( { self.scene.rootNode.addChildNode($0) } )
+			if 	hydrogeneTextPresence == false && AppSettings.shared.labelsPresence {
+				hydrogeneTextNodes.forEach({ moleculeNode.addChildNode($0) })
+			}
+			atomNodes.forEach( { if $0.atomName == "H" { scene.rootNode.addChildNode($0)} } )
+		}
+	}
+
+	@objc internal func labelsSwitch() {
+		if AppSettings.shared.labelsPresence {
+			AppSettings.shared.labelsPresence = !AppSettings.shared.labelsPresence
+			textNodes.forEach({ $0.removeFromParentNode() })
+			hydrogeneTextNodes.forEach({ $0.removeFromParentNode() })
+			hydrogeneTextPresence = false
+		} else {
+			AppSettings.shared.labelsPresence = !AppSettings.shared.labelsPresence
+			if 	AppSettings.shared.hydrogenePresence == true {
+				hydrogeneTextNodes.forEach({ moleculeNode.addChildNode($0) })
+				hydrogeneTextPresence = true
+			}
+			textNodes.forEach({ moleculeNode.addChildNode($0) })
+		}
+	}
+	
+	deinit {
+		removeObservers()
+	}
+	
 }
+
 
 
 // - MARK:ACTIONS
@@ -111,25 +177,34 @@ extension ProteinModelViewController {
         self.present(activityVC, animated: true, completion: nil)
     }
 	
-    @IBAction func showHideLabels(_ sender: UIButton) {
-        if moleculeNode.childNodes.contains(textNodes.first!) {
-            for elem in textNodes {
-				elem.removeFromParentNode()
-            }
-        } else {
-            for elem in textNodes {
-                moleculeNode.addChildNode(elem)
-            }
-        }
-    }
+	@IBAction func showSettings(_ sender: Any) {
+		if presentedViewController is SettingsViewController { return }
+		performSegue(withIdentifier: "showSettings", sender: self)
+	}
 	
-	@IBAction func changeFontSize(_ sender: UIButton) {
-		if sender.tag == 0 {
-			
-		} else {
-			
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "toARModel" {
+			if let destVC = segue.destination as? ArModelViewController {
+				destVC.molecule = self.molecule
+				destVC.title = self.title
+			} else { print("Error extracting destVC") }
 		}
 	}
 }
 
-//418,PYB, K7J,
+extension ProteinModelViewController {
+
+	internal func addObservers() {
+		NotificationCenter.default.addObserver(self, selector: #selector(hydrogeneSwitch), name: Notification.Name("hydrogeneSwitch"), object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(labelsSwitch), name: Notification.Name("labelsSwitch"), object: nil)
+	}
+
+	internal func removeObservers() {
+		NotificationCenter.default.removeObserver(self, name: Notification.Name("hydrogeneSwitch"), object: nil)
+		NotificationCenter.default.removeObserver(self, name: Notification.Name("labelsSwitch"), object: nil)
+	
+	}
+
+}
+
+//418,PYB, K7J, UNK, BV1, IMT

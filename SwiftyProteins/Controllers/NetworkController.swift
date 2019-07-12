@@ -11,7 +11,7 @@ import Alamofire
 import SceneKit
 
 
-class NetworkController {
+final class NetworkController {
     
     static func requestMolecule(with name: String, completion: @escaping (_ data: String) -> Void ) {
         let prefix = "http://files.rcsb.org/ligands/view/"
