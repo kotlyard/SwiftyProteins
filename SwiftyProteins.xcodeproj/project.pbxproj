@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A9159F744CCC7E196A222A7 /* Pods_SwiftyProteins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D3E6DDF91E1FA9619BC68D /* Pods_SwiftyProteins.framework */; };
-		3BD3233D00CA9F2349170E26 /* Pods_SwiftyProteinsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68491F934D9D65F52D281BFE /* Pods_SwiftyProteinsTests.framework */; };
-		B15560DA2FDD2116159A7CE2 /* Pods_SwiftyProteinsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC0E0FC1F01FD9AC0B8FA78 /* Pods_SwiftyProteinsUITests.framework */; };
 		FB0773F122BA633600586D4A /* SCNAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0773F022BA633600586D4A /* SCNAtom.swift */; };
 		FB2FBEA922CE026800F4AF24 /* ARModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2FBEA822CE026800F4AF24 /* ARModelViewController.swift */; };
 		FB323B2E22A004DE00342E3C /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB323B2D22A004DE00342E3C /* ligands.txt */; };
@@ -22,8 +20,6 @@
 		FBA2A12E229D2AC1002AC671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA2A12C229D2AC1002AC671 /* Main.storyboard */; };
 		FBA2A130229D2AC1002AC671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA2A12F229D2AC1002AC671 /* Assets.xcassets */; };
 		FBA2A133229D2AC1002AC671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA2A131229D2AC1002AC671 /* LaunchScreen.storyboard */; };
-		FBA2A13E229D2AC1002AC671 /* SwiftyProteinsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2A13D229D2AC1002AC671 /* SwiftyProteinsTests.swift */; };
-		FBA2A149229D2AC1002AC671 /* SwiftyProteinsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2A148229D2AC1002AC671 /* SwiftyProteinsUITests.swift */; };
 		FBA2A15F229D348D002AC671 /* molecules (1).png in Resources */ = {isa = PBXBuildFile; fileRef = FBA2A15E229D348D002AC671 /* molecules (1).png */; };
 		FBB8746A229D5E8A0057F3BF /* abstract.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBB87469229D5E8A0057F3BF /* abstract.jpg */; };
 		FBBC5D0322A182E60099BB28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC5D0222A182E60099BB28 /* Colors.swift */; };
@@ -35,23 +31,6 @@
 		FBFD585122D72E6C005B6585 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFD585022D72E6C005B6585 /* AppSettings.swift */; };
 		FBFD585322D7344B005B6585 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFD585222D7344B005B6585 /* Extensions.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FBA2A13A229D2AC1002AC671 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBA2A11D229D2AC1002AC671 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FBA2A124229D2AC1002AC671;
-			remoteInfo = SwiftyProteins;
-		};
-		FBA2A145229D2AC1002AC671 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBA2A11D229D2AC1002AC671 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FBA2A124229D2AC1002AC671;
-			remoteInfo = SwiftyProteins;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2EDC4686826858B1D25A2D38 /* Pods-SwiftyProteins.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.release.xcconfig"; path = "Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,12 +56,6 @@
 		FBA2A12F229D2AC1002AC671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SwiftyProteins/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		FBA2A132229D2AC1002AC671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBA2A134229D2AC1002AC671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBA2A139229D2AC1002AC671 /* SwiftyProteinsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyProteinsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBA2A13D229D2AC1002AC671 /* SwiftyProteinsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyProteinsTests.swift; sourceTree = "<group>"; };
-		FBA2A13F229D2AC1002AC671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBA2A144229D2AC1002AC671 /* SwiftyProteinsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyProteinsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBA2A148229D2AC1002AC671 /* SwiftyProteinsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyProteinsUITests.swift; sourceTree = "<group>"; };
-		FBA2A14A229D2AC1002AC671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBA2A15E229D348D002AC671 /* molecules (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "molecules (1).png"; sourceTree = "<group>"; };
 		FBB87469229D5E8A0057F3BF /* abstract.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abstract.jpg; sourceTree = "<group>"; };
 		FBBC5D0222A182E60099BB28 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -101,22 +74,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9159F744CCC7E196A222A7 /* Pods_SwiftyProteins.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FBA2A136229D2AC1002AC671 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3BD3233D00CA9F2349170E26 /* Pods_SwiftyProteinsTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FBA2A141229D2AC1002AC671 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B15560DA2FDD2116159A7CE2 /* Pods_SwiftyProteinsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,8 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				FBA2A127229D2AC1002AC671 /* SwiftyProteins */,
-				FBA2A13C229D2AC1002AC671 /* SwiftyProteinsTests */,
-				FBA2A147229D2AC1002AC671 /* SwiftyProteinsUITests */,
 				FBA2A126229D2AC1002AC671 /* Products */,
 				DFBBF90BD5B037B95B066F2E /* Pods */,
 				F8C16757F8B548FADF984D01 /* Frameworks */,
@@ -171,8 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				FBA2A125229D2AC1002AC671 /* SwiftyProteins.app */,
-				FBA2A139229D2AC1002AC671 /* SwiftyProteinsTests.xctest */,
-				FBA2A144229D2AC1002AC671 /* SwiftyProteinsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,24 +145,6 @@
 				FBA2A134229D2AC1002AC671 /* Info.plist */,
 			);
 			path = SwiftyProteins;
-			sourceTree = "<group>";
-		};
-		FBA2A13C229D2AC1002AC671 /* SwiftyProteinsTests */ = {
-			isa = PBXGroup;
-			children = (
-				FBA2A13D229D2AC1002AC671 /* SwiftyProteinsTests.swift */,
-				FBA2A13F229D2AC1002AC671 /* Info.plist */,
-			);
-			path = SwiftyProteinsTests;
-			sourceTree = "<group>";
-		};
-		FBA2A147229D2AC1002AC671 /* SwiftyProteinsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FBA2A148229D2AC1002AC671 /* SwiftyProteinsUITests.swift */,
-				FBA2A14A229D2AC1002AC671 /* Info.plist */,
-			);
-			path = SwiftyProteinsUITests;
 			sourceTree = "<group>";
 		};
 		FBB8746B229D662E0057F3BF /* Views */ = {
@@ -286,44 +221,6 @@
 			productReference = FBA2A125229D2AC1002AC671 /* SwiftyProteins.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FBA2A138229D2AC1002AC671 /* SwiftyProteinsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FBA2A150229D2AC1002AC671 /* Build configuration list for PBXNativeTarget "SwiftyProteinsTests" */;
-			buildPhases = (
-				B8E385DFA93027146434A34E /* [CP] Check Pods Manifest.lock */,
-				FBA2A135229D2AC1002AC671 /* Sources */,
-				FBA2A136229D2AC1002AC671 /* Frameworks */,
-				FBA2A137229D2AC1002AC671 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FBA2A13B229D2AC1002AC671 /* PBXTargetDependency */,
-			);
-			name = SwiftyProteinsTests;
-			productName = SwiftyProteinsTests;
-			productReference = FBA2A139229D2AC1002AC671 /* SwiftyProteinsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FBA2A143229D2AC1002AC671 /* SwiftyProteinsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FBA2A153229D2AC1002AC671 /* Build configuration list for PBXNativeTarget "SwiftyProteinsUITests" */;
-			buildPhases = (
-				1C2B6F58EA499A9FD767A0C8 /* [CP] Check Pods Manifest.lock */,
-				FBA2A140229D2AC1002AC671 /* Sources */,
-				FBA2A141229D2AC1002AC671 /* Frameworks */,
-				FBA2A142229D2AC1002AC671 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FBA2A146229D2AC1002AC671 /* PBXTargetDependency */,
-			);
-			name = SwiftyProteinsUITests;
-			productName = SwiftyProteinsUITests;
-			productReference = FBA2A144229D2AC1002AC671 /* SwiftyProteinsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -338,18 +235,6 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
-					};
-					FBA2A138229D2AC1002AC671 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FBA2A124229D2AC1002AC671;
-					};
-					FBA2A143229D2AC1002AC671 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FBA2A124229D2AC1002AC671;
 					};
 				};
 			};
@@ -367,8 +252,6 @@
 			projectRoot = "";
 			targets = (
 				FBA2A124229D2AC1002AC671 /* SwiftyProteins */,
-				FBA2A138229D2AC1002AC671 /* SwiftyProteinsTests */,
-				FBA2A143229D2AC1002AC671 /* SwiftyProteinsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -388,45 +271,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBA2A137229D2AC1002AC671 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FBA2A142229D2AC1002AC671 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C2B6F58EA499A9FD767A0C8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftyProteinsUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		621709B943C9936BCC096B34 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,28 +318,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8E385DFA93027146434A34E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftyProteinsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -518,36 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBA2A135229D2AC1002AC671 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FBA2A13E229D2AC1002AC671 /* SwiftyProteinsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FBA2A140229D2AC1002AC671 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FBA2A149229D2AC1002AC671 /* SwiftyProteinsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FBA2A13B229D2AC1002AC671 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FBA2A124229D2AC1002AC671 /* SwiftyProteins */;
-			targetProxy = FBA2A13A229D2AC1002AC671 /* PBXContainerItemProxy */;
-		};
-		FBA2A146229D2AC1002AC671 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FBA2A124229D2AC1002AC671 /* SwiftyProteins */;
-			targetProxy = FBA2A145229D2AC1002AC671 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FBA2A12C229D2AC1002AC671 /* Main.storyboard */ = {
@@ -716,72 +512,6 @@
 			};
 			name = Release;
 		};
-		FBA2A151229D2AC1002AC671 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B616AE64FBE3EEBC7D3D301 /* Pods-SwiftyProteinsTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftyProteinsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dkotlyar.SwiftyProteinsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyProteins.app/SwiftyProteins";
-			};
-			name = Debug;
-		};
-		FBA2A152229D2AC1002AC671 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3AF3D723F9A4BBA7DDA15A4 /* Pods-SwiftyProteinsTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftyProteinsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dkotlyar.SwiftyProteinsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyProteins.app/SwiftyProteins";
-			};
-			name = Release;
-		};
-		FBA2A154229D2AC1002AC671 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32C9D222F92659DCAD39B7C0 /* Pods-SwiftyProteinsUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftyProteinsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dkotlyar.SwiftyProteinsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftyProteins;
-			};
-			name = Debug;
-		};
-		FBA2A155229D2AC1002AC671 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E029CC57AAD090BD1474427A /* Pods-SwiftyProteinsUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftyProteinsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dkotlyar.SwiftyProteinsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftyProteins;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -799,24 +529,6 @@
 			buildConfigurations = (
 				FBA2A14E229D2AC1002AC671 /* Debug */,
 				FBA2A14F229D2AC1002AC671 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FBA2A150229D2AC1002AC671 /* Build configuration list for PBXNativeTarget "SwiftyProteinsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FBA2A151229D2AC1002AC671 /* Debug */,
-				FBA2A152229D2AC1002AC671 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FBA2A153229D2AC1002AC671 /* Build configuration list for PBXNativeTarget "SwiftyProteinsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FBA2A154229D2AC1002AC671 /* Debug */,
-				FBA2A155229D2AC1002AC671 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
